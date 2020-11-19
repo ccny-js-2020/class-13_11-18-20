@@ -1,5 +1,7 @@
-//if any checkbox within the '.w3-checkboxes' class is clicked
-$('.w3-checkboxes > input[type="checkbox"]').click(function(){
+console.log($(".w3-checkboxes").children("input[type='checkbox']").length);
+
+//if any checkbox that have the '.checkboxes' class is clicked
+$('.checkboxes').click(function(){
     //logging the value of the checked input
     console.log($(this).val());
 
@@ -17,7 +19,7 @@ $('.w3-checkboxes > input[type="checkbox"]').click(function(){
     //looping through all of the checkboxes in the 'w3-checkboxes' class on the dom
     $(".w3-checkboxes").children("input[type='checkbox']").each(function(){
       //logging through each child element in the div
-      console.log($(this));
+      //console.log($(this));
 
       //if the checkbox is checked
       if($(this).prop("checked") == true){
@@ -25,12 +27,13 @@ $('.w3-checkboxes > input[type="checkbox"]').click(function(){
         numChecked++
       }
 
-      //if numChecked is equal to the amount of the checkboxes in the 'w3-checkboxes' class
-      if(numChecked == $(".w3-checkboxes").children("input").length){
-        //log that all 3 of the checkboxes in that div are checked
-        console.log("all of the checkboxes in the w3-checkboxes class are checked")
-      }
     });
+
+    //if numChecked is equal to the amount of the checkboxes in the 'w3-checkboxes' class
+    if(numChecked == $(".w3-checkboxes").children("input[type='checkbox']").length){
+      //log that all 3 of the checkboxes in that div are checked
+      console.log("all of the checkboxes in the w3-checkboxes class are checked")
+    }
 });
 
 

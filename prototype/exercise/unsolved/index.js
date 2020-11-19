@@ -28,6 +28,7 @@ $("#first-form").submit(function(e){
     alert("password is invalid. It must be at least 7 characters");
   }
 
+  /* make sure that this doesnt get printed unless all validation passes */
   var creds = {
     name: name,
     email: email,

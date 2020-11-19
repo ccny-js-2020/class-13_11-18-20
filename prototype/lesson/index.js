@@ -49,6 +49,14 @@ console.log(stringOne.firstLetterToUppercase());
 console.log(stringTwo.firstLetterToUppercase());
 
 
+//create my own Number function and squaring it
+Number.prototype.timesItself = function(){
+  return this * this;
+}
+var num = 100;
+console.log(num.timesItself());
+
+
 //you can create your own function for any datatype, not just a string
 //like an array too
 
